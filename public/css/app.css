@@ -1,0 +1,16 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.header-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-titulo h1 {
+    font-size: 100px;
+    text-align: center;
+}
