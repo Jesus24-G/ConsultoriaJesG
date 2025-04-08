@@ -52,3 +52,65 @@
 .imagen-servicio {
     height: 200px;
 }
+
+/* Clientes */
+
+.imagenes-clientes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-content: center; */
+    /* place-content: center; */
+    /* align-self: center; */
+    align-items: center;
+}
+
+.contenedor-clientes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contenedor-clientes .card-comentario {
+
+    /* background-color: greenyellow; */
+    background-color: var(--gris);
+    width: 400px;
+    margin: 0 auto;
+
+}
+
+.card-titulo-comentario {
+    color: white;
+    font-weight: bold;
+}
+
+.card-contenido-comentario {
+    color: white;
+    font-weight: bold;
+}
+
+.testimonial {
+    background-color: lightgreen;
+    font-size: 18px;
+    padding: 2rem;
+    color: white;
+    border-radius: 20px;    
+
+   
+}
+
+.testimonial blockquote {
+        padding-left: 50px;
+        position: relative;
+}
+
+.testimonial blockquote::before {
+    content: '';
+    background-image: url(/img/comilla.svg);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 70px;
+    display: block;
+    position: absolute;
+    left: -2rem;
+}

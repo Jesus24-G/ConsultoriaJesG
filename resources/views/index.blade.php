@@ -56,7 +56,7 @@
                 <h1 class="logo">Consultoria Dev GB</h1>
             </div>
         </div>
-        
+
     </div>
 
     <div class="diagonal-box">
@@ -97,8 +97,63 @@
                     <h4>Administracion de Base de Datos</h4>
                 </div>
             </div>
-           
+
         </div>
+    </div>
+
+    
+
+    <div class="container-xl my-5">
+        <h2 class="text-center fw-bold mb-5">Casos de Exito</h2>
+        <section class="contenedor-clientes">
+
+            <div class="card text-start card-comentario shadow testimonial">
+                <div class="card-body">
+                    <h4 class="card-title card-titulo-comentario mb-3">Inmobiliaria Solomex</h4>
+                    <blockquote>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officia dolor odio hic explicabo iusto facilis assumenda, molestiae corporis nobis ducimus quidem esse, libero, praesentium eius provident nihil ipsum quos?
+                    </blockquote>
+                    <!-- <p class="card-text card-contenido-comentario"></p> -->
+                </div>
+            </div>
+
+            <div class="card text-start card-comentario shadow testimonial">
+                <div class="card-body">
+                    <h4 class="card-title card-titulo-comentario mb-3">Inmobiliaria Solomex</h4>
+                    <blockquote>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officia dolor odio hic explicabo iusto facilis assumenda, molestiae corporis nobis ducimus quidem esse, libero, praesentium eius provident nihil ipsum quos?
+                    </blockquote>
+                    <!-- <p class="card-text card-contenido-comentario"></p> -->
+                </div>
+            </div>
+
+            <div class="card text-start card-comentario shadow testimonial">
+                <div class="card-body">
+                    <h4 class="card-title card-titulo-comentario mb-3">Hotel Villas Fasol</h4>
+                    <blockquote>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officia dolor odio hic explicabo iusto facilis assumenda, molestiae corporis nobis ducimus quidem esse, libero, praesentium eius provident nihil ipsum quos?
+                    </blockquote>
+                    <!-- <p class="card-text card-contenido-comentario"></p> -->
+                </div>
+            </div>
+
+            <div class="card text-start card-comentario shadow testimonial">
+                <div class="card-body">
+                    <h4 class="card-title card-titulo-comentario mb-3">Inmobiliaria Solomex</h4>
+                    <blockquote>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officia dolor odio hic explicabo iusto facilis assumenda, molestiae corporis nobis ducimus quidem esse, libero, praesentium eius provident nihil ipsum quos?
+                    </blockquote>
+                    <!-- <p class="card-text card-contenido-comentario"></p> -->
+                </div>
+            </div>
+
+            
+           
+
+
+
+
+        </section>
     </div>
 
 
