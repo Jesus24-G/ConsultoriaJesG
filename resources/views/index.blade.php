@@ -59,6 +59,48 @@
         
     </div>
 
+    <div class="diagonal-box">
+        <h2 class="my-4 text-center text-white display-3 fw-bold">Servicios</h2>
+        <div class="contenedor-servicios">
+
+            <div class="card b-0 shadow zoom">
+                <img src="{{ asset('img/app-movil.jpg') }}" alt="" class="card-img-top imagen-servicio">
+                <div class="card-body">
+                    <h4>Desarrollo de Aplicaciones Moviles</h4>
+                </div>
+            </div>
+
+            <div class="card shadow zoom">
+                <img src="{{ asset('img/dev-web.jpg') }}" alt="" class="card-img-top imagen-servicio">
+                <div class="card-body">
+                    <h4>Desarrollo de Sitios Web</h4>
+                </div>
+            </div>
+
+            <div class="card shadow zoom">
+                <img src="{{ asset('img/analisis.jpg') }}" alt="" class="card-img-top imagen-servicio">
+                <div class="card-body">
+                    <h4>Analisis</h4>
+                </div>
+            </div>
+
+            <div class="card shadow zoom">
+                <img src="{{ asset('img/administracion-linux.jpg') }}" alt="" class="card-img-top imagen-servicio">
+                <div class="card-body">
+                    <h4>Administracion de Sistemas Linux</h4>
+                </div>
+            </div>
+
+            <div class="card shadow zoom">
+                <img src="{{ asset('img/administracion-db.jpg') }}" alt="" class="card-img-top imagen-servicio">
+                <div class="card-body">
+                    <h4>Administracion de Base de Datos</h4>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
