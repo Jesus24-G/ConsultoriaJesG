@@ -101,7 +101,13 @@
         </div>
     </div>
 
-    
+    <div class="container-xl my-5">
+        <h2 class="text-center fw-bold mb-5">Clientes que confian en nosotros</h2>
+        <section class="imagenes-clientes">
+            <img class="zoom mx-auto" src="{{ asset('img/clientes/Logo-inmobiliaria.png') }}" alt="imagen-cliente">
+            <img class="zoom mx-auto" src="{{ asset('img/clientes/LogoFasol.jpg') }}" alt="imagen-cliente">
+        </section>
+    </div>
 
     <div class="container-xl my-5">
         <h2 class="text-center fw-bold mb-5">Casos de Exito</h2>
