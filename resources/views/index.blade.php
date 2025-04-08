@@ -8,18 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-    <style>
-        body {
-            /* background-color: black; */
-        }
-
-        .logo {
-            text-shadow: 1px 1px 2px black, 0 0 5px blue, 0 0 10px darkblue;
-            font-size: 30px;
-            color: lightskyblue;
-        }
-    </style>
+    
 </head>
 
 <body>
