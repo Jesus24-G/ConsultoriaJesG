@@ -1,3 +1,17 @@
+/* UTILIDADES */
+:root {
+    --gris: #313C4E;
+}
+
+.zoom {
+    transition: all 300ms ease;
+
+}
+
+.zoom:hover {
+    transform: scale(1.03);
+}
+
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -13,4 +27,90 @@
 .header-titulo h1 {
     font-size: 100px;
     text-align: center;
+}
+
+/* SERVICIOS */
+.contenedor-servicios {
+    width: 70%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.diagonal-box {
+    /* background: linear-gradient(0deg, black 0%, white 100%); */
+    padding: 40px;
+    background-color: var(--gris);
+}
+
+.card {
+    /* background-color: blueviolet; */
+    border: 0 !important;
+}
+.imagen-servicio {
+    height: 200px;
+}
+
+/* Clientes */
+
+.imagenes-clientes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-content: center; */
+    /* place-content: center; */
+    /* align-self: center; */
+    align-items: center;
+}
+
+.contenedor-clientes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contenedor-clientes .card-comentario {
+
+    /* background-color: greenyellow; */
+    background-color: var(--gris);
+    width: 400px;
+    margin: 0 auto;
+
+}
+
+.card-titulo-comentario {
+    color: white;
+    font-weight: bold;
+}
+
+.card-contenido-comentario {
+    color: white;
+    font-weight: bold;
+}
+
+.testimonial {
+    background-color: lightgreen;
+    font-size: 18px;
+    padding: 2rem;
+    color: white;
+    border-radius: 20px;    
+
+   
+}
+
+.testimonial blockquote {
+        padding-left: 50px;
+        position: relative;
+}
+
+.testimonial blockquote::before {
+    content: '';
+    background-image: url(/img/comilla.svg);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 70px;
+    display: block;
+    position: absolute;
+    left: -2rem;
 }

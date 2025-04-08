@@ -56,7 +56,110 @@
                 <h1 class="logo">Consultoria Dev GB</h1>
             </div>
         </div>
-        
+
+    </div>
+
+    <div class="diagonal-box">
+        <h2 class="my-4 text-center text-white display-3 fw-bold">Servicios</h2>
+        <div class="contenedor-servicios">
+
+            <div class="card b-0 shadow zoom">
+                <img src="{{ asset('img/app-movil.jpg') }}" alt="" class="card-img-top imagen-servicio">
+                <div class="card-body">
+                    <h4>Desarrollo de Aplicaciones Moviles</h4>
+                </div>
+            </div>
+
+            <div class="card shadow zoom">
+                <img src="{{ asset('img/dev-web.jpg') }}" alt="" class="card-img-top imagen-servicio">
+                <div class="card-body">
+                    <h4>Desarrollo de Sitios Web</h4>
+                </div>
+            </div>
+
+            <div class="card shadow zoom">
+                <img src="{{ asset('img/analisis.jpg') }}" alt="" class="card-img-top imagen-servicio">
+                <div class="card-body">
+                    <h4>Analisis</h4>
+                </div>
+            </div>
+
+            <div class="card shadow zoom">
+                <img src="{{ asset('img/administracion-linux.jpg') }}" alt="" class="card-img-top imagen-servicio">
+                <div class="card-body">
+                    <h4>Administracion de Sistemas Linux</h4>
+                </div>
+            </div>
+
+            <div class="card shadow zoom">
+                <img src="{{ asset('img/administracion-db.jpg') }}" alt="" class="card-img-top imagen-servicio">
+                <div class="card-body">
+                    <h4>Administracion de Base de Datos</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-xl my-5">
+        <h2 class="text-center fw-bold mb-5">Clientes que confian en nosotros</h2>
+        <section class="imagenes-clientes">
+            <img class="zoom mx-auto" src="{{ asset('img/clientes/Logo-inmobiliaria.png') }}" alt="imagen-cliente">
+            <img class="zoom mx-auto" src="{{ asset('img/clientes/LogoFasol.jpg') }}" alt="imagen-cliente">
+        </section>
+    </div>
+
+    <div class="container-xl my-5">
+        <h2 class="text-center fw-bold mb-5">Casos de Exito</h2>
+        <section class="contenedor-clientes">
+
+            <div class="card text-start card-comentario shadow testimonial">
+                <div class="card-body">
+                    <h4 class="card-title card-titulo-comentario mb-3">Inmobiliaria Solomex</h4>
+                    <blockquote>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officia dolor odio hic explicabo iusto facilis assumenda, molestiae corporis nobis ducimus quidem esse, libero, praesentium eius provident nihil ipsum quos?
+                    </blockquote>
+                    <!-- <p class="card-text card-contenido-comentario"></p> -->
+                </div>
+            </div>
+
+            <div class="card text-start card-comentario shadow testimonial">
+                <div class="card-body">
+                    <h4 class="card-title card-titulo-comentario mb-3">Inmobiliaria Solomex</h4>
+                    <blockquote>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officia dolor odio hic explicabo iusto facilis assumenda, molestiae corporis nobis ducimus quidem esse, libero, praesentium eius provident nihil ipsum quos?
+                    </blockquote>
+                    <!-- <p class="card-text card-contenido-comentario"></p> -->
+                </div>
+            </div>
+
+            <div class="card text-start card-comentario shadow testimonial">
+                <div class="card-body">
+                    <h4 class="card-title card-titulo-comentario mb-3">Hotel Villas Fasol</h4>
+                    <blockquote>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officia dolor odio hic explicabo iusto facilis assumenda, molestiae corporis nobis ducimus quidem esse, libero, praesentium eius provident nihil ipsum quos?
+                    </blockquote>
+                    <!-- <p class="card-text card-contenido-comentario"></p> -->
+                </div>
+            </div>
+
+            <div class="card text-start card-comentario shadow testimonial">
+                <div class="card-body">
+                    <h4 class="card-title card-titulo-comentario mb-3">Inmobiliaria Solomex</h4>
+                    <blockquote>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat officia dolor odio hic explicabo iusto facilis assumenda, molestiae corporis nobis ducimus quidem esse, libero, praesentium eius provident nihil ipsum quos?
+                    </blockquote>
+                    <!-- <p class="card-text card-contenido-comentario"></p> -->
+                </div>
+            </div>
+
+            
+           
+
+
+
+
+        </section>
     </div>
 
 
