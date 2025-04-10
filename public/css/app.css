@@ -12,6 +12,14 @@
     transform: scale(1.03);
 }
 
+.efecto-rotate {
+    transition: all 300ms ease;
+}
+
+.efecto-rotate:hover {
+    transform: rotateY('90deg');
+}
+
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -28,6 +36,96 @@
     font-size: 100px;
     text-align: center;
 }
+
+/* MISION VISION Y VALORES */
+.contenedor-mvv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+    margin-bottom: 20px;
+}
+
+.mision, .vision, .valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed var(--gris);
+    /* border-style: dashed; */
+    padding: 20px;
+
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+
+.contenedor-mvv svg {
+    width: 150px;
+    height: auto;
+    margin: 15px auto;
+}
+
+.contenedor-mvv h3 {
+    text-align: center;
+    color: black;
+
+}
+
+.contenedor-mvv p {
+    text-align: justify;
+    color: black;
+}
+
+.mision:hover {
+    background-color: var(--gris);
+    transform: rotate(-5deg);
+}
+
+.mision:hover h3 {
+    color: white;
+}
+
+.mision:hover p {
+    color: white;
+}
+
+.mision:hover svg {
+    fill: white !important;
+}
+
+.vision:hover {
+    background-color: var(--gris);
+    transform: rotate(-5deg);
+}
+
+.vision:hover h3 {
+    color: white;
+}
+
+.vision:hover p {
+    color: white;
+}
+
+.vision:hover svg {
+    fill: white;
+}
+
+.valores:hover {
+    background-color: var(--gris);
+    transform: rotate(-5deg);
+}
+
+.valores:hover h3 {
+    color: white;
+}
+
+.valores:hover p {
+    color: white;
+}
+
+.valores:hover svg {
+    fill: white;
+}
+
 
 /* SERVICIOS */
 .contenedor-servicios {
@@ -61,7 +159,6 @@
     /* align-content: center; */
     /* place-content: center; */
     /* align-self: center; */
-    align-items: center;
 }
 
 .contenedor-clientes {
@@ -114,3 +211,4 @@
     position: absolute;
     left: -2rem;
 }
+
