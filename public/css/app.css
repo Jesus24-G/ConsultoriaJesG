@@ -206,11 +206,20 @@
 /* Clientes */
 
 .imagenes-clientes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* align-content: center; */
-    /* place-content: center; */
-    /* align-self: center; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .imagenes-clientes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* align-content: center; */
+        /* place-content: center; */
+        /* align-self: center; */
+        align-items: center;
+    } 
 }
 
 .contenedor-clientes {
