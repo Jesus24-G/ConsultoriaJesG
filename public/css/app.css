@@ -61,14 +61,11 @@
 }
 
 @media (min-width: 900px) {
-
     .contenedor-servicios {
         width: 70%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
-        
-
     }
     
 }
