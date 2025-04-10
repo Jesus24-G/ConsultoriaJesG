@@ -139,8 +139,10 @@
 
     <div class="container-xl my-5">
         <h2 class="text-center fw-bold mb-5">Clientes que confian en nosotros</h2>
-        <section class="imagenes-clientes">
-            <img class="zoom mx-auto" src="{{ asset('img/clientes/Logo-inmobiliaria.png') }}" alt="imagen-cliente">
+        <section class="imagenes-clientes text-center">
+            <a href="https://inmobiliariasolomex.com.mx/">
+                <img class="zoom mx-auto" src="{{ asset('img/clientes/Logo-inmobiliaria.png') }}" alt="imagen-cliente">
+            </a>
             <img class="zoom mx-auto" src="{{ asset('img/clientes/LogoFasol.jpg') }}" alt="imagen-cliente">
         </section>
     </div>
