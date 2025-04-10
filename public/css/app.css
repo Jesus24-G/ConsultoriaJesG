@@ -12,6 +12,14 @@
     transform: scale(1.03);
 }
 
+.efecto-rotate {
+    transition: all 300ms ease;
+}
+
+.efecto-rotate:hover {
+    transform: rotateY('90deg');
+}
+
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,15 +37,157 @@
     text-align: center;
 }
 
-/* SERVICIOS */
-.contenedor-servicios {
-    width: 70%;
-    margin: 0 auto;
-
+/* MISION VISION Y VALORES */
+.contenedor-mvv {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
+    gap: 5%;
+    margin-bottom: 20px;
 }
+
+.mision, .vision, .valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed var(--gris);
+    /* border-style: dashed; */
+    padding: 20px;
+
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+
+    .contenedor-mvv {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .mision, .vision, .valores {
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+
+.contenedor-mvv svg {
+    width: 150px;
+    height: auto;
+    margin: 15px auto;
+}
+
+.contenedor-mvv h3 {
+    text-align: center;
+    color: black;
+
+}
+
+.contenedor-mvv p {
+    text-align: justify;
+    color: black;
+}
+
+.mision:hover {
+    background-color: var(--gris);
+    transform: rotate(-5deg);
+}
+
+.mision:hover h3 {
+    color: white;
+}
+
+.mision:hover p {
+    color: white;
+}
+
+.mision:hover svg {
+    fill: white !important;
+}
+
+.vision:hover {
+    background-color: var(--gris);
+    transform: rotate(-5deg);
+}
+
+.vision:hover h3 {
+    color: white;
+}
+
+.vision:hover p {
+    color: white;
+}
+
+.vision:hover svg {
+    fill: white;
+}
+
+.valores:hover {
+    background-color: var(--gris);
+    transform: rotate(-5deg);
+}
+
+.valores:hover h3 {
+    color: white;
+}
+
+.valores:hover p {
+    color: white;
+}
+
+.valores:hover svg {
+    fill: white;
+}
+
+
+/* SERVICIOS */
+.contenedor-servicios {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+}
+
+@media (min-width: 480px) {
+    .contenedor-servicios {
+        display: flex;
+        width: 65%;
+        margin: 0 auto;
+    }   
+
+
+}
+
+@media (min-width: 600px) {
+
+    .contenedor-servicios {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+
+    }
+    
+}
+
+@media (min-width: 900px) {
+    .contenedor-servicios {
+        width: 70%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    
+}
+
+
+
+
+
+
+
 
 .diagonal-box {
     /* background: linear-gradient(0deg, black 0%, white 100%); */
@@ -122,3 +272,4 @@
     position: absolute;
     left: -2rem;
 }
+
