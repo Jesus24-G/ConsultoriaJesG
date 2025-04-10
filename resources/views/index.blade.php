@@ -38,15 +38,17 @@
         </div>
     </nav>
 
-    <div class="container-xl">
-        <div class="header p-1 mt-4">
-            <img src="{{ asset('img/web-dev-image.jpg') }}" class="img-fluid" alt="">
-            <div class="header-titulo">
+    <div class="contenedor-principal">
+        <div class="sombra">
+        <div class="contenido-principal">
                 <h1 class="logo">Consultoria Dev GB</h1>
+                <button class="btn btn-info w-50 mx-auto my-3">Contactar</button>
             </div>
+
         </div>
-        
     </div>
+
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
