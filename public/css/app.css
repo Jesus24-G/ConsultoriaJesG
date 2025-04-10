@@ -143,13 +143,51 @@
 
 /* SERVICIOS */
 .contenedor-servicios {
-    width: 70%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
 }
+
+@media (min-width: 480px) {
+    .contenedor-servicios {
+        display: flex;
+        width: 65%;
+        margin: 0 auto;
+    }   
+
+
+}
+
+@media (min-width: 600px) {
+
+    .contenedor-servicios {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+
+    }
+    
+}
+
+@media (min-width: 900px) {
+    .contenedor-servicios {
+        width: 70%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    
+}
+
+
+
+
+
+
+
 
 .diagonal-box {
     /* background: linear-gradient(0deg, black 0%, white 100%); */
