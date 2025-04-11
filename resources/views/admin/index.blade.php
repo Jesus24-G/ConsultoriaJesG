@@ -95,7 +95,7 @@
                             <img src="{{$cliente->imagen}}" alt="imagen cliente" class="img-fluid imagen-cliente-admin">
                         </td>
                         <td style="text-align: center; vertical-align: middle;">
-                            <form action="{{ route('servicios.destroy', $cliente->id) }}" method="POST" class="d-inline-block delete-form">
+                            <form action="{{ route('cliente.destroy', $cliente->id) }}" method="POST" class="d-inline-block delete-form">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
