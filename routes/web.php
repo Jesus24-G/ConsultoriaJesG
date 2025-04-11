@@ -24,6 +24,8 @@ Route::get('/admin', function () {
 Route::get('/admin/servicio/new', [ServicioController::class, 'paginaNuevoServicio'])->name('nuevo.servicio.get');
 // Ruta para agregar nuevo servicio
 Route::post('/admin/servicios/new', [ServicioController::class, 'store'])->name('servicios.store');
+// Ruta para eliminar servicio
+Route::delete('/servicios/{id}', [ServicioController::class, 'destroy'])->name('servicios.destroy');
 
 
 // Ruta para cliente

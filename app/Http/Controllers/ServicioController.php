@@ -38,4 +38,18 @@ class ServicioController extends Controller
 
         return redirect()->route('nuevo.servicio.get')->with('success', 'Servicio agregado correctamente');
     }
+
+    public function destroy($id)
+{
+    $servicio = Servicio::findOrFail($id);
+
+    // Elimina la imagen del disco si existe
+    if ($servicio->imagen && file_exists(public_path($servicio->imagen))) {
+        unlink(public_path($servicio->imagen));
+    }
+
+    $servicio->delete();
+
+    return redirect()->back()->with('success', 'Servicio eliminado correctamente.');
+}
 }

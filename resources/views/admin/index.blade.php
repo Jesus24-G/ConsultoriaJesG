@@ -7,6 +7,7 @@
     <title>Consultoria SystemJG</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 </head>
@@ -52,17 +53,21 @@
 
                 <tbody class="table-light">
                     @foreach ($servicios as $servicio)
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;">{{$servicio->nombre}}</td>
-                            <td class="ocultar-movil" style="text-align: center; vertical-align: middle;">{{$servicio->descripcion}}</td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                <img src="{{$servicio->imagen}}" alt="imagen servicio" class="img-fluid imagen-servicio">
-                            </td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                <input type="submit" class="btn btn-danger" value="Eliminar">
-                            </td>
-                        </tr>
-                        
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;">{{$servicio->nombre}}</td>
+                        <td class="ocultar-movil" style="text-align: center; vertical-align: middle;">{{$servicio->descripcion}}</td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <img src="{{$servicio->imagen}}" alt="imagen servicio" class="img-fluid imagen-servicio">
+                        </td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <form action="{{ route('servicios.destroy', $servicio->id) }}" method="POST" class="d-inline-block delete-form">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+
                     @endforeach
                 </tbody>
             </table>
@@ -70,7 +75,28 @@
     </div>
 
 
-    
+
+    <script>
+    document.querySelectorAll('.delete-form').forEach(form => {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡Esta acción no se puede deshacer!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Sí, eliminar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+        });
+    });
+</script>
 
 
 
