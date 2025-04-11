@@ -19,7 +19,10 @@ Route::get('/admin', function () {
 
 // Ruta para servicios
 Route::get('/admin/servicio/new', [ServicioController::class, 'paginaNuevoServicio'])->name('nuevo.servicio.get');
+// Ruta para agregar nuevo servicio
+Route::post('/admin/servicios/new', [ServicioController::class, 'store'])->name('servicios.store');
 
 
 // Ruta para cliente
 Route::get('admin/cliente/new', [ClienteController::class, 'paginaNuevoCliente'])->name('nuevo.cliente.get');
+
