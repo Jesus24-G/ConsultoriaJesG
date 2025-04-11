@@ -343,3 +343,16 @@
     left: -30px;
 }
 
+
+/* ============================== ADMIN ========================================= */
+.formulario {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .formulario {
+        width: 500px;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}

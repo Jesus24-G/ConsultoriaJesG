@@ -29,13 +29,28 @@
     </nav>
 
 
-    <h1 class="text-center my-4">Bienvenido a Admin</h1>
 
     <div class="container-xl">
+        <h1 class="text-center my-3">Agrega un nuevo Servicio</h1>
 
-        <div class="menu">
-            <a href="{{ route('nuevo.servicio.get') }}" class="btn btn-primary">Nuevo Servicio</a>
-        </div>
+        <form action="" class="formulario shadow rounded border">
+            <div class="my-3">
+                <label for="" class="form-label">Servicio</label>
+                <input type="text" class="form-control" placeholder="Nombre Servicio">
+            </div>
+            <div class="my-3">
+                <label for="descripcion-servicio" class="form-label">Descripcion</label>
+                <textarea name="" id="descripcion-servicio" placeholder="Descripcion Servicio" class="form-control"></textarea>
+            </div>
+            <div class="my-3">
+                <label for="imagen-servicio" class="form-label">Imagen Servicio</label>
+                <input type="file" class="form-control">
+            </div>
+
+            <div class="mt-5 d-flex justify-content-end">
+                <input type="submit" class="btn btn-primary" value="Agregar Servicio">
+            </div>
+        </form>
     </div>
 
 
