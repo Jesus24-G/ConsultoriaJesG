@@ -8,10 +8,11 @@ use App\Models\Servicio;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    
+   
     $servicios = Servicio::all();
     $clientes = Cliente::all();
     return view('index', ['servicios' => $servicios, 'clientes' => $clientes]);
+
 });
 
 Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('login.formulario');
