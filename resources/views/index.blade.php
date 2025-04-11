@@ -94,7 +94,7 @@
 
 
             <div class="card b-0 shadow zoom">
-                <img src="{{ asset($servicio->imagen) }}" alt="" class="card-img-top imagen-servicio">     
+                <img src="{{ asset($servicio->imagen) }}" alt="" class="card-img-top imagen-servicio">
                 <div class="card-body">
                     <h4>{{ $servicio->nombre }}</h4>
                 </div>
@@ -109,11 +109,11 @@
     <div class="container-xl my-5">
         <h2 class="text-center fw-bold mb-5">Clientes que confian en nosotros</h2>
         <section class="imagenes-clientes text-center">
-                @foreach ($clientes as $cliente)
-                <a href="https://inmobiliariasolomex.com.mx/">
-                    <img class="zoom mx-auto imagen-cliente" src="{{ asset($cliente->imagen) }}" alt="imagen-cliente">
-                </a>
-                @endforeach
+            @foreach ($clientes as $cliente)
+            <a href="https://inmobiliariasolomex.com.mx/">
+                <img class="zoom mx-auto imagen-cliente" src="{{ asset($cliente->imagen) }}" alt="imagen-cliente">
+            </a>
+            @endforeach
         </section>
     </div>
 
@@ -132,9 +132,60 @@
                 </div>
             </div>
             @endforeach
-            
+
 
         </section>
+
+
+        <section class="bg-light py-5 text-center">
+            <div class="container">
+                <h2 class="mb-4">¡Conéctate con nosotros!</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-center gap-4">
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/share/1F6WG4LQS7/" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+
+                    <!-- Correo -->
+                    <a href="mailto:contacto@unidevjes.com" class="btn btn-outline-secondary">
+                        <i class="fas fa-envelope"></i> Envíanos un correo
+                    </a>
+
+                </div>
+            </div>
+
+
+        </section>
+
+        <div class="col-md-6 mx-auto">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">Contáctanos</h2>
+
+                @if(session('success'))
+                <div class="alert alert-success">{{ session('success') }}</div>
+                @elseif(session('error'))
+                <div class="alert alert-danger">{{ session('error') }}</div>
+                @endif
+
+                <form action="{{ route('contacto.enviar') }}" method="POST" class="p-4 border rounded shadow bg-white">
+                    @csrf
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" name="nombre" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Correo electrónico</label>
+                        <input type="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mensaje</label>
+                        <textarea name="mensaje" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
 
     </div>
 
