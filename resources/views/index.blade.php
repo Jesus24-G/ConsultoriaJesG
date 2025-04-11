@@ -90,40 +90,17 @@
         <h2 class="my-4 text-center text-white display-3 fw-bold">Servicios</h2>
         <div class="contenedor-servicios">
 
-            <div class="card b-0 shadow zoom">
-                <img src="{{ asset('img/app-movil.jpg') }}" alt="" class="card-img-top imagen-servicio">
+        @foreach ($servicios as $servicio)
+        <div class="card b-0 shadow zoom">
+                <img src="{{ asset($servicio->imagen) }}" alt="" class="card-img-top imagen-servicio">
                 <div class="card-body">
-                    <h4>Desarrollo de Aplicaciones Moviles</h4>
+                    <h4>{{ $servicio->nombre }}</h4>
                 </div>
             </div>
+        @endforeach
+            
 
-            <div class="card shadow zoom">
-                <img src="{{ asset('img/dev-web.jpg') }}" alt="" class="card-img-top imagen-servicio">
-                <div class="card-body">
-                    <h4>Desarrollo de Sitios Web</h4>
-                </div>
-            </div>
-
-            <div class="card shadow zoom">
-                <img src="{{ asset('img/analisis.jpg') }}" alt="" class="card-img-top imagen-servicio">
-                <div class="card-body">
-                    <h4>Analisis</h4>
-                </div>
-            </div>
-
-            <div class="card shadow zoom">
-                <img src="{{ asset('img/administracion-linux.jpg') }}" alt="" class="card-img-top imagen-servicio">
-                <div class="card-body">
-                    <h4>Administracion de Sistemas Linux</h4>
-                </div>
-            </div>
-
-            <div class="card shadow zoom">
-                <img src="{{ asset('img/administracion-db.jpg') }}" alt="" class="card-img-top imagen-servicio">
-                <div class="card-body">
-                    <h4>Administracion de Base de Datos</h4>
-                </div>
-            </div>
+           
 
         </div>
     </div>
