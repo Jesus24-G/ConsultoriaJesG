@@ -93,16 +93,10 @@
             @foreach ($servicios as $servicio)
 
             <div class="card b-0 shadow zoom">
-                <img src="{{ asset($servicio->imagen) }}" alt="" class="card-img-top imagen-servicio">
-                <div class="card-body">
-                    <h4>{{ $servicio->nombre }}</h4>
-                </div>
+                <img src="{{ asset($servicio->imagen) }}" alt="" class="card-img-top imagen-servicio">     
             </div>
 
             @endforeach
-
-
-
 
         </div>
     </div>
