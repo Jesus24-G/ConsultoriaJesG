@@ -15,8 +15,10 @@ Route::get('/', function () {
 
 });
 
-Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('login.formulario');
+Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('admin.login');
+// Ruta para cerrar sesion
+Route::post('/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
 Route::get('/admin', function () {
 
@@ -27,17 +29,18 @@ Route::get('/admin', function () {
 
 
 // Ruta para servicios
-Route::get('/admin/servicio/new', [ServicioController::class, 'paginaNuevoServicio'])->name('nuevo.servicio.get');
+Route::get('/admin/servicio/new', [ServicioController::class, 'paginaNuevoServicio'])->middleware('auth:admin')->name('nuevo.servicio.get');
 // Ruta para agregar nuevo servicio
-Route::post('/admin/servicios/new', [ServicioController::class, 'store'])->name('servicios.store');
+Route::post('/admin/servicios/new', [ServicioController::class, 'store'])->middleware('auth:admin')->name('servicios.store');
 // Ruta para eliminar servicio
-Route::delete('/servicios/{id}', [ServicioController::class, 'destroy'])->name('servicios.destroy');
+Route::delete('/servicios/{id}', [ServicioController::class, 'destroy'])->middleware('auth:admin')->name('servicios.destroy');
 
 
 // Ruta para cliente
-Route::get('admin/cliente/new', [ClienteController::class, 'paginaNuevoCliente'])->name('nuevo.cliente.get');
+Route::get('admin/cliente/new', [ClienteController::class, 'paginaNuevoCliente'])->middleware('auth:admin')->name('nuevo.cliente.get');
 // Ruta para agregar un nuevo cliente
-Route::post('admin/cliente/new', [ClienteController::class, 'store'])->name('cliente.store');
+Route::post('admin/cliente/new', [ClienteController::class, 'store'])->middleware('auth:admin')->name('cliente.store');
 // Ruta para eliminar cliente 
-Route::delete('/clientes/{id}', [ClienteController::class, 'destroy'])->name('cliente.destroy');
+Route::delete('/clientes/{id}', [ClienteController::class, 'destroy'])->middleware('auth:admin')->name('cliente.destroy');
+
 
