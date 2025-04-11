@@ -35,6 +35,7 @@
 
         <div class="menu">
             <a href="{{ route('nuevo.servicio.get') }}" class="btn btn-primary">Nuevo Servicio</a>
+            <a href="{{ route('nuevo.cliente.get') }}" class="btn btn-primary">Nuevo Cliente</a>
         </div>
     </div>
 
