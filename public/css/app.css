@@ -261,6 +261,9 @@
     flex-direction: column;
     row-gap: 30px;
 }
+.imagen-cliente {
+    max-height: 200px;
+}
 
 @media (min-width: 768px) {
     .imagenes-clientes {
@@ -368,6 +371,11 @@
     width: 150px;
     height: auto;
 
+}
+
+.imagen-cliente-admin {
+    width: 200px;
+    height: auto;
 }
 @media (max-width: 600px) {
     .ocultar-movil {

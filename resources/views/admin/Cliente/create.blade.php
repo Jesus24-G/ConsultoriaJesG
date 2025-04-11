@@ -8,6 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -33,18 +34,19 @@
     <div class="container-xl">
         <h1 class="text-center my-3">Agrega un nuevo Cliente</h1>
 
-        <form action="" class="formulario shadow rounded border">
+        <form action="{{ route('cliente.store') }}" method="POST" enctype="multipart/form-data" class="formulario shadow rounded border">
+            @csrf
             <div class="my-3">
                 <label for="" class="form-label">Nombre Cliente</label>
-                <input type="text" class="form-control" placeholder="Nombre Cliente">
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre Cliente">
             </div>
             <div class="my-3">
                 <label for="comentario-cliente" class="form-label">Comentario:</label>
-                <textarea name="" id="comentario-cliente" placeholder="Comentario Cliente" class="form-control"></textarea>
+                <textarea name="comentario" id="comentario-cliente" placeholder="Comentario Cliente" class="form-control"></textarea>
             </div>
             <div class="my-3">
                 <label for="imagen-cliente" class="form-label">Imagen Cliente</label>
-                <input type="file" class="form-control">
+                <input type="file" name="imagen" class="form-control">
             </div>
 
             <div class="mt-5 d-flex justify-content-end">
@@ -53,6 +55,19 @@
         </form>
     </div>
 
+    @if (session('success'))
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '¡Éxito!',
+            text: "{{ session('success') }}",
+            confirmButtonText: 'OK'
+        }).then(() => {
+            // Redireccionar después de cerrar el SweetAlert
+            window.location.href = "{{ route('admin.index') }}"; // o a donde quieras redirigir
+        });
+    </script>
+    @endif
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>

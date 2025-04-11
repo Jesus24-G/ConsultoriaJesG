@@ -3,15 +3,15 @@
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ServicioController;
+use App\Models\Cliente;
 use App\Models\Servicio;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-
-
+   
     $servicios = Servicio::all();
-    return view('index', ['servicios' => $servicios]);
-
+    $clientes = Cliente::all();
+    return view('index', ['servicios' => $servicios, 'clientes' => $clientes]);
 
 });
 
@@ -21,7 +21,8 @@ Route::post('/login', [LoginController::class, 'login'])->name('admin.login');
 Route::get('/admin', function () {
 
     $servicios = Servicio::all();
-    return view('admin.index', ['servicios' => $servicios]);
+    $clientes = Cliente::all();
+    return view('admin.index', ['servicios' => $servicios, 'clientes' => $clientes]);
 })->middleware('auth:admin')->name('admin.index');
 
 
@@ -35,4 +36,6 @@ Route::delete('/servicios/{id}', [ServicioController::class, 'destroy'])->name('
 
 // Ruta para cliente
 Route::get('admin/cliente/new', [ClienteController::class, 'paginaNuevoCliente'])->name('nuevo.cliente.get');
+// Ruta para agregar un nuevo cliente
+Route::post('admin/cliente/new', [ClienteController::class, 'store'])->name('cliente.store');
 
