@@ -36,4 +36,18 @@ class ClienteController extends Controller
 
         return redirect()->route('nuevo.cliente.get')->with('success', 'Cliente agregado correctamente');
     }
+
+    public function destroy($id)
+    {
+        $cliente = Cliente::findOrFail($id);
+
+        // Elimina la imagen del disco si existe
+        if ($cliente->imagen && file_exists(public_path($cliente->imagen))) {
+            unlink(public_path($cliente->imagen));
+        }
+
+        $cliente->delete();
+
+        return redirect()->back()->with('success', 'Cliente eliminado correctamente.');
+    }
 }
