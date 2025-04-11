@@ -57,7 +57,7 @@
                         <td style="text-align: center; vertical-align: middle;">{{$servicio->nombre}}</td>
                         <td class="ocultar-movil" style="text-align: center; vertical-align: middle;">{{$servicio->descripcion}}</td>
                         <td style="text-align: center; vertical-align: middle;">
-                            <img src="{{$servicio->imagen}}" alt="imagen servicio" class="img-fluid imagen-servicio">
+                            <img src="{{$servicio->imagen}}" alt="imagen servicio" class="img-fluid imagen-servicio-admin">
                         </td>
                         <td style="text-align: center; vertical-align: middle;">
                             <form action="{{ route('servicios.destroy', $servicio->id) }}" method="POST" class="d-inline-block delete-form">
