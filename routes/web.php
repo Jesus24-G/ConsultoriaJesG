@@ -7,8 +7,7 @@ use App\Models\Servicio;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $servicios = Servicio::all();
-    return view('index', ['servicios' => $servicios]);
+    return view('index');
 });
 
 Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('login.formulario');
