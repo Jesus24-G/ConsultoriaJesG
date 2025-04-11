@@ -369,6 +369,11 @@
     height: auto;
 
 }
+
+.imagen-cliente-admin {
+    width: 200px;
+    height: auto;
+}
 @media (max-width: 600px) {
     .ocultar-movil {
         display: none;

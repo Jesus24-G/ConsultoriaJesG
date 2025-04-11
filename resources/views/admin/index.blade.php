@@ -72,6 +72,41 @@
                 </tbody>
             </table>
         </div>
+
+
+        <div class="my-5">
+            <h1 class="my-4 text-secondary text-center">Clientes</h1>
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th class="ocultar-movil" style="width: 400px; max-width: 30%;">Comentario</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody class="table-light">
+                    @foreach ($clientes as $cliente)
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;">{{$cliente->nombre}}</td>
+                        <td class="ocultar-movil" style="text-align: center; vertical-align: middle;">{{$cliente->comentario}}</td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <img src="{{$cliente->imagen}}" alt="imagen cliente" class="img-fluid imagen-cliente-admin">
+                        </td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <form action="{{ route('servicios.destroy', $cliente->id) }}" method="POST" class="d-inline-block delete-form">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 
 
