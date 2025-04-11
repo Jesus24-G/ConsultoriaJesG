@@ -8,4 +8,8 @@ Route::get('/', function () {
 });
 
 Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('login.formulario');
+Route::post('/login', [LoginController::class, 'login'])->name('admin.login');
 
+Route::get('/admin', function () {
+    return view('admin.index');
+})->middleware('auth:admin')->name('admin.index');

@@ -29,34 +29,7 @@
     </nav>
 
 
-    <div class="col-md-5 mx-auto mt-5">
-        <form method="POST" action="{{ route('admin.login') }}" class="p-4 border shadow">
-        <h4 class="text-center">Login</h4>
-            @csrf
-            <div class="my-3">
-                <label class="form-label">Email:</label>
-                <input class="form-control" type="email" name="email" required>
-            </div>
-
-            <div class="my-3">
-                <label class="form-label">Contraseña:</label>
-                <input class="form-control" type="password" name="password" required>
-            </div>
-
-            <div class="my-3 d-flex justify-content-end">
-                <input type="submit" class="btn btn-dark" value="Inciar Sesion">
-            </div>
-        </form>
-
-        @if($errors->any())
-        <div style="color: red;">
-            {{ $errors->first() }}
-        </div>
-        @endif
-    </div>
-
-
-
+    <h1>Bienvenido a Admin</h1>
 
 
 
