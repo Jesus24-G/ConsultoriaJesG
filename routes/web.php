@@ -8,8 +8,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
+
     $servicios = Servicio::all();
     return view('index', ['servicios' => $servicios]);
+
 
 });
 
