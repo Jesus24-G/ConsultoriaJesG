@@ -30,4 +30,6 @@ Route::delete('/servicios/{id}', [ServicioController::class, 'destroy'])->name('
 
 // Ruta para cliente
 Route::get('admin/cliente/new', [ClienteController::class, 'paginaNuevoCliente'])->name('nuevo.cliente.get');
+// Ruta para agregar un nuevo cliente
+Route::post('admin/cliente/new', [ClienteController::class, 'store'])->name('cliente.store');
 
