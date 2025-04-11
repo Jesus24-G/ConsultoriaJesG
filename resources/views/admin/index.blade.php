@@ -29,15 +29,48 @@
     </nav>
 
 
-    <h1 class="text-center my-4">Bienvenido a Admin</h1>
+    <!-- <h1 class="text-center my-4">Bienvenido a Admin</h1> -->
 
     <div class="container-xl">
 
-        <div class="menu">
+        <div class="menu my-5">
             <a href="{{ route('nuevo.servicio.get') }}" class="btn btn-primary">Nuevo Servicio</a>
             <a href="{{ route('nuevo.cliente.get') }}" class="btn btn-primary">Nuevo Cliente</a>
         </div>
+
+        <div class="my-5">
+            <h1 class="my-4 text-secondary text-center">Servicios</h1>
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th class="ocultar-movil">Descripcion</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody class="table-light">
+                    @foreach ($servicios as $servicio)
+                        <tr>
+                            <td style="text-align: center; vertical-align: middle;">{{$servicio->nombre}}</td>
+                            <td class="ocultar-movil" style="text-align: center; vertical-align: middle;">{{$servicio->descripcion}}</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <img src="{{$servicio->imagen}}" alt="imagen servicio" class="img-fluid imagen-servicio">
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <input type="submit" class="btn btn-danger" value="Eliminar">
+                            </td>
+                        </tr>
+                        
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
+
+
+    
 
 
 

@@ -356,3 +356,21 @@
         margin: 0 auto;
     }
 }
+
+/* Servicios Admin */
+
+.servicio-descripcion,
+.contenido-servicio-descripcion {
+    /* display: none; */
+}
+
+.imagen-servicio {
+    width: 150px;
+    height: auto;
+
+}
+@media (max-width: 600px) {
+    .ocultar-movil {
+        display: none;
+    }
+}

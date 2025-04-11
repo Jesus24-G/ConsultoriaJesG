@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ServicioController;
+use App\Models\Servicio;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,7 +14,9 @@ Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('log
 Route::post('/login', [LoginController::class, 'login'])->name('admin.login');
 
 Route::get('/admin', function () {
-    return view('admin.index');
+
+    $servicios = Servicio::all();
+    return view('admin.index', ['servicios' => $servicios]);
 })->middleware('auth:admin')->name('admin.index');
 
 
