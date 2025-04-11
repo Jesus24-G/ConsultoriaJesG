@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ServicioController;
 use App\Models\Cliente;
@@ -43,4 +44,7 @@ Route::post('admin/cliente/new', [ClienteController::class, 'store'])->middlewar
 // Ruta para eliminar cliente 
 Route::delete('/clientes/{id}', [ClienteController::class, 'destroy'])->middleware('auth:admin')->name('cliente.destroy');
 
+
+// Ruta para enviar email
+Route::post('/contacto', [ContactoController::class, 'enviar'])->name('contacto.enviar');
 
